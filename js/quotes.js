@@ -48,10 +48,11 @@ const quotes = [
   },
 ];
 
+const quoteContainer = document.querySelector("#quote");
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 
 const todayQuote = quotes[Math.floor(Math.random() * 10)];
 
-quote.innerText = todayQuote.quote;
-author.innerText = todayQuote.author;
+quote.innerText = `"${todayQuote.quote}"`;
+author.innerText = `-${todayQuote.author}-`;

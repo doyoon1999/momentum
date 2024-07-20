@@ -1,0 +1,210 @@
+#container_top {
+  display: flex;
+  width: 100%;
+  height: 90%;
+}
+
+/* container_left */
+#container_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 30px;
+  font-size: 25px;
+}
+
+#greeting {
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  margin-bottom: 50px;
+}
+
+#link-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+#link-box a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  transition: all 0.1s ease-in-out;
+}
+
+#link-box a:hover,
+#link-box a:active {
+  color: greenyellow;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transform: scale(1.08);
+}
+
+/* container_right */
+#container_right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 29vw;
+  height: 60vh;
+  margin-top: 20px;
+  padding: 40px;
+  border-radius: 15px;
+  overflow-y: auto;
+}
+#todo-form {
+  display: flex;
+  justify-content: center;
+}
+.todo-form__input {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8vw;
+  border: none;
+  border-bottom: 2.5px solid white;
+  background-color: transparent;
+  width: 26.2vw;
+  transition: all 0.2s ease-in-out;
+}
+.todo-form__input::placeholder {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+.todo-form__input:focus::placeholder,
+.todo-form__input:hover::placeholder {
+  color: var(--main-color);
+}
+.todo-form__input:focus,
+.todo-form__input:hover {
+  outline: none;
+  transform: scale(1.05);
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+#todo-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 45px;
+  color: white;
+  font-size: 25px;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#todo-list li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 7px;
+  width: 18px;
+  height: 18px;
+  margin-left: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+#todo-list li button:hover {
+  background-color: rgb(222, 255, 173);
+  transform: scale(1.08);
+}
+
+.custom-checkbox {
+  margin: 0 15px 0 15px;
+  transition: all 0.1s ease-in-out;
+}
+
+.custom-checkbox:hover {
+  transform: scale(1.08);
+}
+
+/* 기본 체크박스 숨기기 */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* 커스텀 체크박스 스타일 */
+input[type="checkbox"] + .checkmark {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + .checkmark:hover {
+  background-color: rgb(222, 255, 173);
+  border: 1px solid rgb(222, 255, 173);
+}
+
+/* 체크박스가 선택된 상태일 때의 스타일 */
+input[type="checkbox"]:checked + .checkmark {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+/* 체크 표시 추가 */
+input[type="checkbox"] + .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* 체크박스가 선택된 상태일 때 체크 표시 표시 */
+input[type="checkbox"]:checked + .checkmark:after {
+  display: block;
+}
+
+/* 체크 표시 스타일 */
+input[type="checkbox"] + .checkmark:after {
+  left: 4px;
+  top: 0.2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* SCROLL BAR */
+.todo-container::-webkit-scrollbar {
+  width: 15px; /* 스크롤바 너비 */
+}
+
+.todo-container::-webkit-scrollbar-track {
+  background: white; /* 스크롤바 트랙 배경색 */
+  border-radius: 15px;
+}
+
+.todo-container::-webkit-scrollbar-thumb {
+  background: var(--main-color); /* 스크롤바 손잡이 색상 */
+  border-radius: 15px; /* 스크롤바 손잡이 둥근 모서리 */
+}
+
+.todo-container::-webkit-scrollbar-thumb:active {
+  background: rgb(135, 219, 9); /* 스크롤바 손잡이 호버 색상 */
+}

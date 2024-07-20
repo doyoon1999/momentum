@@ -1,40 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <link
+      rel="icon"
+      href="https://img.freepik.com/free-vector/star-round-corners_78370-4576.jpg?t=st=1721213005~exp=1721216605~hmac=aa3f71d05f4408b586233605464ec25e66e34281d956e215b9ab616fe40cc631&w=1480"
+      type="image/x-icon"
+    />
+    <title>HAL1</title>
   </head>
-  <body>
-    <form id="login-form" class="hidden">
-      <input
-        type="text"
-        required
-        placeholder="이름을 입력해주세요."
-        maxlength="15"
-      />
-      <button type="submit">submit</button>
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <h2 id="clock">00:00:00</h2>
-    <form id="todo-form">
-      <input
-        type="text"
-        placeholder="할 일을 입력하고, 엔터를 눌러주세요:)"
-        required
-      />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
+  <body class="dynamic-text">
+    <div id="login-container">
+      <form id="login-form">
+        <input
+          class="login-form__input"
+          type="text"
+          required
+          placeholder="이름을 입력해주세요."
+          maxlength="15"
+        />
+        <button type="submit">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
     </div>
-    <script src="js/greetings.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
+    <div id="container" class="hidden">
+      <div id="container_top">
+        <div id="container_left">
+          <h1 id="greeting"></h1>
+          <div id="date"></div>
+          <h2 id="clock">00:00:00</h2>
+          <div id="weather">
+            <span></span>
+            <span></span>
+          </div>
+          <div id="link-box">
+            <a href="https://www.youtube.com/" target="_blank">YOUTUBE</a>
+            <a href="https://nomadcoders.co/" target="_blank">NOMAD CODERS</a>
+            <a href="https://chatgpt.com/" target="_blank">CHAT GPT</a>
+          </div>
+        </div>
+        <div id="container_right">
+          <div class="todo-container">
+            <form id="todo-form">
+              <input
+                class="todo-form__input"
+                type="text"
+                placeholder="할 일을 입력하고, 엔터를 눌러주세요:)"
+                required
+              />
+            </form>
+            <ul id="todo-list"></ul>
+          </div>
+        </div>
+      </div>
+      <div id="container_bottom">
+        <div id="quote">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
     <script src="js/todo.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/quotes.js" defer></script>
+    <script src="js/weathers.js" defer></script>
+    <script src="js/greetings.js" defer></script>
+    <script src="js/dynamic-text.js"></script>
     <script
       src="https://kit.fontawesome.com/45700226c7.js"
       crossorigin="anonymous"

@@ -15,3 +15,12 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chosenImage}`;
 document.body.appendChild(bgImage);
+bgImage.id = "background-image";
+
+// 이미지가 로드된 후에 동적 텍스트 색상 변경 함수를 호출
+bgImage.onload = function () {
+  if (typeof setDynamicTextColor === "function") {
+    const textElement = document.querySelector(".dynamic-text");
+    setDynamicTextColor(bgImage, textElement);
+  }
+};
