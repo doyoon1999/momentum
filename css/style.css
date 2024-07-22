@@ -7,6 +7,11 @@
 @import url("container_top.css");
 @import url("container_bottom.css");
 
+::selection {
+  background-color: lightgreen;
+  color: lightyellow;
+}
+
 body {
   display: flex;
   justify-content: center;
