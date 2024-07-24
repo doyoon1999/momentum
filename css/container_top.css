@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  gap: 30px;
+  gap: 25px;
   font-size: 25px;
 }
 
@@ -19,29 +19,85 @@
   justify-content: center;
   align-items: center;
   font-size: 3vw;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
-#link-box {
+#link_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  overflow: auto;
+  width: 100%;
+  gap: 70px;
+  padding: 10px;
+}
+#link_container_top {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+}
+#link_container_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-box {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 50px;
 }
 
-#link-box a {
+.link-box a {
   text-decoration: none;
   color: inherit;
   font-weight: 700;
   transition: all 0.1s ease-in-out;
 }
 
-#link-box a:hover,
-#link-box a:active {
+.link-box a:hover,
+.link-box a:active {
   color: greenyellow;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   transform: scale(1.08);
+}
+
+/*searchForm */
+#search-box {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.searchForm input {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  border: none;
+  border-bottom: 2.5px solid white;
+  background-color: transparent;
+  width: 300px;
+  transition: all 0.2s ease-in-out;
+  will-change: auto;
+}
+.searchForm input::placeholder {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+.searchForm input:focus::placeholder,
+.searchForm input:hover::placeholder {
+  color: var(--main-color);
+}
+.searchForm input:focus,
+.searchForm input:hover {
+  outline: none;
+  transform: scale(1.05);
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
 }
 
 /* container_right */
@@ -58,8 +114,7 @@
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.5);
   width: 29vw;
-  height: 60vh;
-  margin-top: 20px;
+  height: 63vh;
   padding: 40px;
   border-radius: 15px;
   overflow-y: auto;

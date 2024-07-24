@@ -36,10 +36,48 @@
             <span></span>
             <span></span>
           </div>
-          <div id="link-box">
-            <a href="https://www.youtube.com/" target="_blank">YOUTUBE</a>
-            <a href="https://nomadcoders.co/" target="_blank">NOMAD CODERS</a>
-            <a href="https://chatgpt.com/" target="_blank">CHAT GPT</a>
+          <div id="link_container">
+            <div id="link_container_top">
+              <div class="link-box">
+                <a href="https://www.youtube.com/" target="_blank">YOUTUBE</a>
+                <a href="https://nomadcoders.co/" target="_blank"
+                  >NOMAD CODERS</a
+                >
+                <a href="https://chatgpt.com/" target="_blank">CHAT GPT</a>
+              </div>
+              <div class="link-box">
+                <a href="https://www.google.com/" target="_blank">Google</a>
+                <a href="https://www.naver.com/" target="_blank">NAVER</a>
+              </div>
+            </div>
+            <div id="link_container_bottom">
+              <div id="search-box">
+                <form class="searchForm" onsubmit="searchGoogle(event)">
+                  <input
+                    type="text"
+                    id="searchQuery"
+                    placeholder="Google에서 검색하기"
+                    required
+                  />
+                </form>
+                <form class="searchForm" onsubmit="searchNaver(event)">
+                  <input
+                    type="text"
+                    id="searchQuery"
+                    placeholder="NAVER에서 검색하기"
+                    required
+                  />
+                </form>
+                <form class="searchForm" onsubmit="searchYouTube(event)">
+                  <input
+                    type="text"
+                    id="searchQuery"
+                    placeholder="YOUTUBE에서 검색하기"
+                    required
+                  />
+                </form>
+              </div>
+            </div>
           </div>
         </div>
         <div id="container_right">
@@ -57,6 +95,7 @@
         </div>
       </div>
       <div id="container_bottom">
+        <div></div>
         <div id="quote">
           <span></span>
           <span></span>
@@ -70,6 +109,7 @@
     <script src="js/quotes.js" defer></script>
     <script src="js/weathers.js" defer></script>
     <script src="js/greetings.js" defer></script>
+    <script src="js/search-form.js"></script>
     <script src="js/dynamic-text.js"></script>
     <script
       src="https://kit.fontawesome.com/45700226c7.js"
