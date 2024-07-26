@@ -69,12 +69,12 @@
 #search-box {
   display: flex;
   flex-direction: column;
-  display: flex;
   align-items: center;
   gap: 25px;
   background-color: rgba(0, 0, 0, 0.35);
   padding: 20px 40px 20px 40px;
   border-radius: 15px;
+  height: 135px;
 }
 
 .searchForm input {
@@ -86,7 +86,7 @@
   background-color: transparent;
   width: 300px;
   transition: all 0.2s ease-in-out;
-  will-change: auto;
+  will-change: transform;
 }
 .searchForm input::placeholder {
   color: white;
@@ -136,6 +136,7 @@
   background-color: transparent;
   width: 26.2vw;
   transition: all 0.2s ease-in-out;
+  will-change: transform;
 }
 .todo-form__input::placeholder {
   color: white;
@@ -176,6 +177,7 @@
   justify-content: center;
   border: none;
   font-size: 7px;
+  background-color: white;
   width: 18px;
   height: 18px;
   margin-left: 15px;

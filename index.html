@@ -48,6 +48,36 @@
               <div class="link-box">
                 <a href="https://www.google.com/" target="_blank">Google</a>
                 <a href="https://www.naver.com/" target="_blank">NAVER</a>
+                <div id=" bookmark">
+                  <button onclick="toggleFavorites()" id="bookmark-button">
+                    <i class="fa-solid fa-cube"></i>
+                  </button>
+                  <div id="favoritesBox">
+                    <div id="close-btn_container">
+                      <button class="close-btn" onclick="closeFavorites()">
+                        <span>나가기</span>
+                      </button>
+                    </div>
+                    <form id="bookmarkForm">
+                      <input
+                        type="text"
+                        id="linkName"
+                        placeholder="링크 이름"
+                        required
+                      />
+                      <input
+                        type="text"
+                        id="linkUrl"
+                        placeholder="주소"
+                        required
+                      />
+                      <button type="submit">
+                        <i class="fa-solid fa-paper-plane"></i>
+                      </button>
+                    </form>
+                    <ul id="linkList"></ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="link_container_bottom">
@@ -110,6 +140,7 @@
     <script src="js/weathers.js" defer></script>
     <script src="js/greetings.js" defer></script>
     <script src="js/search-form.js"></script>
+    <script src="js/bookmark.js"></script>
     <script src="js/dynamic-text.js"></script>
     <script
       src="https://kit.fontawesome.com/45700226c7.js"

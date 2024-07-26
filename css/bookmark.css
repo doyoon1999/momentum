@@ -1,0 +1,169 @@
+#bookmark-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+#bookmark-button i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #90ee8f;
+  transition: all 0.1s ease-in-out;
+}
+#bookmark-button i:hover,
+#bookmark-button i:focus {
+  transform: scale(1.12);
+  color: var(--main-color);
+}
+
+#bookmarkForm input {
+  border: none;
+  border-radius: 10px;
+  background-color: lightyellow;
+  padding: 8px;
+  will-change: transform;
+  transition: all 0.1s ease-in-out;
+}
+#bookmarkForm input:focus,
+#bookmarkForm input:hover {
+  outline: none;
+  transform: scale(1.02);
+}
+#bookmarkForm input::placeholder {
+  transition: all 0.1s ease-in-out;
+}
+#bookmarkForm input:hover::placeholder,
+#bookmarkForm input:focus::placeholder {
+  color: black;
+}
+
+#bookmarkForm button {
+  border: none;
+  border-radius: 6px;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+}
+#bookmarkForm button i {
+  margin-left: -2.2px;
+  transition: all 0.1s ease-in-out;
+  font-size: 15px;
+}
+#bookmarkForm button i:hover {
+  color: var(--main-color);
+  transform: scale(1.15);
+}
+
+#favoritesBox {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: none;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: rgb(237, 254, 213);
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#linkList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  color: black;
+  padding: 20px;
+  gap: 15px;
+  overflow: auto;
+  height: 50vh;
+}
+#linkList li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+#linkList li a {
+  font-size: 18px;
+  transition: all 0.1s ease-in-out;
+}
+#linkList li a:hover {
+  color: var(--main-color);
+  text-shadow: none;
+  transform: scale(1.1);
+}
+#linkList li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 7px;
+  background-color: white;
+  width: 18px;
+  height: 18px;
+  margin-left: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+#linkList li button:hover {
+  background-color: var(--main-color);
+  transform: scale(1.08);
+}
+
+#close-btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#close-btn_container span {
+  margin: 2px;
+}
+
+.close-btn {
+  font-family: "Maven Pro", "Jua", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 15px;
+  background-color: transparent;
+  margin: 0px 3px 7px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  will-change: transform;
+}
+
+.close-btn:hover {
+  background-color: var(--main-color);
+  transform: scale(1.08);
+}
+
+/* SCROLL BAR */
+#linkList::-webkit-scrollbar {
+  width: 15px; /* 스크롤바 너비 */
+}
+
+#linkList::-webkit-scrollbar-track {
+  background: white; /* 스크롤바 트랙 배경색 */
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+#linkList::-webkit-scrollbar-thumb {
+  background: var(--main-color); /* 스크롤바 손잡이 색상 */
+  border-radius: 15px; /* 스크롤바 손잡이 둥근 모서리 */
+}
+
+#linkList::-webkit-scrollbar-thumb:active {
+  background: rgb(135, 219, 9); /* 스크롤바 손잡이 호버 색상 */
+}
